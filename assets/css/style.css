@@ -148,6 +148,7 @@ input {
     z-index: var(--z-fixed);
 }
 
+
 /*=============== NAV ===============*/
 .nav{
     height:calc(var(--header-height) + 1.5rem);
@@ -213,9 +214,11 @@ input {
 }
 
 
-
 /* Change background header */
-
+.scroll-header {
+    background: red;
+    box-shadow: 0 1px 4px var(--shadow);
+}
 
 /* Active link */
 .active-link {
@@ -234,9 +237,6 @@ input {
 }
 
 
-
-
-
 /*=============== MAIN ===============*/
 /*========== HOME SECTION ==========*/
 .home__content {
@@ -253,7 +253,7 @@ input {
 
 .home__img {
    height: 420px;
-   transform: translate(-3rem);
+   transform: translateY(-3rem);
    justify-self: center;
 }
 
@@ -283,15 +283,20 @@ input {
     right: 58%;
 }
 
-.home__details-title,
+.home__details-title {
+    display: block;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+}
+
 .home__details-subtitle {
     display: block;
-    font-size: var(--small-font-size);
+    font-size: var(--h4-font-size);
     text-align: right;
 }
 
-.home__sibtitle {
-    font-size: var(--h3-font-size);
+.home__subtitle {
+    font-size: var(--h1-font-size);
     text-transform: uppercase;
     margin-bottom: var(--mb-1);
 }
@@ -308,13 +313,35 @@ input {
     padding-right: 2rem;
 }
 
-
-
+.home_buttons {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
 /* Swiper Class */
+.swiper-pagination {
+    position: initial;
+    margin-top: var(--mb-2-5);
+}
 
+.swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    background: var(--title-color);
+    opacity: 1;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 .5rem;
+}
+
+.swiper-pagination-bullet-active {
+    width: 1.5rem;
+    height: 5px;
+    border-radius: .5rem;
+}
 
 
 /*=============== BUTTONS ===============*/
@@ -331,6 +358,22 @@ input {
 .button:hover {
     background: var(--first-color-alt);
 }
+
+.button__icon {
+    font-size: 1.25rem;
+}
+
+.button--link {
+    color: var(--title-color);
+}
+
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+
 
 /*========== DISCOUNT SECTION ==========*/
 
@@ -565,8 +608,6 @@ input {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
 }
-
-
 
 /* Show cart */
 .show-cart {
