@@ -33,7 +33,7 @@
 
 /*=============== HOME SWIPER ===============*/
 var homeSwiper = new Swiper(".home-swiper", {
-    spaceBettween: 30,
+    spaceBetween: 30,
     loop: 'true',
 
     pagination: {
@@ -53,6 +53,12 @@ window.addEventListener('scroll', scrollHeader)
 
 
 /*=============== NEW SWIPER ===============*/
+var newSwiper = new Swiper(".new-swiper", {
+    spaceBetween: 16,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: 'true',
+  });
 
 
 /*=============== SHOW SCROLL UP ===============*/ 
