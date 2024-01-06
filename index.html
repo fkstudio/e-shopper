@@ -53,8 +53,8 @@
                 </ul>
             </div>
 
-            <div class="nav__btns">
-                <div class="login__toggle" id="login-toggle">
+            <div class="nav__btns">    
+                <div class="login__toggle" id="login-button">
                     <i class="bx bx-user"></i>
                 </div>
 
@@ -73,7 +73,7 @@
 
     <!--=============== CART ===============-->
     <div class="cart" id="cart">
-        <i class="bx bx-x cart__close"></i>
+        <i class="bx bx-x cart__close" id="cart-close"></i>
 
         <h2 class="cart__title-center">My Cart</h2>
 
@@ -88,17 +88,15 @@
                     <span class="cart__price">$12</span>
 
                 <div class="cart__amount">
-                        <div class="cart__amount-content">
-                            <span class="cart__amount-box">
-                                <i class="bx bx-minus"></i>
-                            </span>
+                    <div class="cart__amount-content">
+                        <span class="cart__amount-box">
+                            <i class="bx bx-minus"></i>
+                        </span>
 
-                            <span class="cart__amount-number">1</span>
-
-                            <span class="cart__amount-box">
-                                <i class="bx bx-plus"></i>
-                            </span>
-                </div>
+                        <span class="cart__amount-box">
+                            <i class="bx bx-plus"></i>
+                        </span>
+                    </div>
 
                     <i class="bx bx-trash-alt cart__amount-trash"></i>
 
@@ -115,18 +113,18 @@
                     <h3 class="cart__title">Cardigan Hoodie</h3>
                     <span class="cart__price">$16</span>
 
-                <div class="cart__amount">
-                        <div class="cart__amount-content">
-                            <span class="cart__amount-box">
+                    <div class="cart__amount">
+                    <div class="cart__amount-content">
+                        <span class="cart__amount-box">
                                 <i class="bx bx-minus"></i>
-                            </span>
+                        </span>
 
-                            <span class="cart__amount-number">1</span>
+                        <span class="cart__amount-number">1</span>
 
-                            <span class="cart__amount-box">
+                        <span class="cart__amount-box">
                                 <i class="bx bx-plus"></i>
-                            </span>
-                </div>
+                        </span>
+                    </div>
 
                     <i class="bx bx-trash-alt cart__amount-trash"></i>
 
@@ -522,6 +520,9 @@
     </footer>
 
     <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
 
     <!--=============== STYLE SWITCHER ===============-->
 
