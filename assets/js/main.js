@@ -1,8 +1,15 @@
 /*=============== SHOW MENU ===============*/
-
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById ('nav-toggle'),
+      navClose = document.getElementById('nav-close')
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
+if(navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add('show-menu')
+  })
+}
 
 
 /*===== MENU HIDDEN =====*/
@@ -12,7 +19,7 @@
 /*=============== SHOW CART ===============*/
 const cart = document.getElementById('cart'),
       cartShop = document.getElementById ('cart-shop'),
-      cartShop = document.getElementById('cart-close')
+      cartClose = document.getElementById('cart-close')
 
 /*===== CART SHOW =====*/
 /* Validate if constant exists */
@@ -35,6 +42,7 @@ const login = document.getElementById('login'),
       loginButton = document.getElementById ('login-button'),
       loginClose = document.getElementById('login-close')
 
+
 /*===== LOGIN SHOW =====*/
 /* Validate if constant exists */
 if(loginButton) {
@@ -45,13 +53,11 @@ if(loginButton) {
 
 /*===== LOGIN HIDDEN =====*/
 /* Validate if constant exists */
-if(loginclose) {
-  loginclose.addEventListener("click", () => {
+if(loginClose) {
+  loginClose.addEventListener("click", () => {
     login.classList.add('show-login')
   })
 }
-
-
 
 /*=============== HOME SWIPER ===============*/
 var homeSwiper = new Swiper(".home-swiper", {
@@ -63,7 +69,6 @@ var homeSwiper = new Swiper(".home-swiper", {
       clickable: true,
     },
   });
-
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
@@ -89,6 +94,7 @@ function scrollUp() {
    // when the scrioll is greater than 350 viewport height, add the scroll-scroll to a with the scroll-top class
    if(this.scrollY >= 350) scrollUp.classsList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
+window.addEventListener('scroll', scrollUp)
 
 
 /*=============== LIGHT BOX ===============*/

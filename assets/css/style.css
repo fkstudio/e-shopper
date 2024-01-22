@@ -158,6 +158,7 @@ input {
     column-gap: 3rem;
 }
 
+.nav_close,
 .login__toggle,
 .nav__logo,
 .nav__toggle,
@@ -209,13 +210,29 @@ input {
     color: var(--first-color);
 }
 
+.nav__close {
+    font-size: 2rem;
+    position: absolute;
+    top:.9rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+.nav__close,
 .nav__toggle {
     display: none;
 }
 
+/* show menu */
+.show-menu {
+    right: 0;
+}
 
 /* Change background header */
 .scroll-header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     background: red;
     box-shadow: 0 1px 4px var(--shadow);
 }
@@ -399,10 +416,6 @@ input {
     font-size: var(--h2-font-size);
     margin-bottom:var(--mb-2);
 }
-
-
-
-
 
 
 /*========== NEW ARRIVALS SECTION ==========*/
@@ -925,7 +938,6 @@ input {
     .home__img {
         height: 400px;
     }
-
 }
 
 @media screen and (max-width: 992px) {
@@ -1008,13 +1020,11 @@ input {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
     }
-
-
 }
 
 /* For medium devices */
 @media screen and (max-width: 767px) {
-    body {
+    .body {
         margin: var(--header-height) 0 0 0;
     }
 
@@ -1026,6 +1036,26 @@ input {
         height: var(--header-height);
     }
 
+    .nav__menu {
+        position: fixed;
+        background-color: var(--body-color);
+        top:0;
+        right:100%;
+        width: 100%;
+        height: 100%;
+        padding: 6rem 2rem 3.5rem;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .nav__toggle,
+    .nav__close {
+        display: block;
+    }
+
     .home__content {
         padding: 0;
         grid-template-columns: 1fr;
@@ -1033,7 +1063,51 @@ input {
     }
 }
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+    .steps__container {
+        grid-template-columns: 1fr;
+    }
+
+    .steps__bg {
+        padding: 3rem2rem 2rem;
+    }
+
+    .news__container {
+        grid-template-columns: 1fr;
+    }
+
+    .login,
+    .cart {
+        width: 100%;
+    }
+}
 
 /* For small devices */
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+
+    .nav {
+        column-gap: 0;
+    }
+
+    .home__img {
+        height: 200px;
+    }
+
+    .home__buttons {
+        flex-direction: column;
+        width: max-content;
+        row-gap: 1rem;
+    }
+
+    .steps__bg {
+        padding: 2rem 1rem;
+    }
+
+    .steps__card {
+        padding: 1.5rem;
+    }
+}
